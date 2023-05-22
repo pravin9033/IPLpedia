@@ -1,11 +1,12 @@
 package com.example.iplhistory.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 @Entity
-@Table(name = "match")
 public class Match {
     @Id
     private long id;
@@ -22,6 +23,9 @@ public class Match {
     private String resultMargin;
     private String umpire1;
     private String umpire2;
+
+    public Match() {
+    }
 
     public long getId() {
         return id;

@@ -1,0 +1,7 @@
+DROP TABLE match IF EXISTS;
+CREATE TABLE match (id BIGINT IDENTITY NOT NULL PRIMARY KEY, city VARCHAR(250), date date,player_of_match VARCHAR(250),venue VARCHAR(250),team1 VARCHAR(250),team2 VARCHAR(250),toss_winner VARCHAR(250),toss_decision VARCHAR(250),match_winner VARCHAR(250),result VARCHAR(250),result_margin VARCHAR(250),umpire1 VARCHAR(250),umpire2 VARCHAR(250));
+
+DROP TABLE team IF EXISTS;
+
+CREATE TABLE team (id BIGINT IDENTITY NOT NULL PRIMARY KEY , team_name VARCHAR(250), total_matches BIGINT,total_wins BIGINT);
+

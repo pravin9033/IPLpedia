@@ -4,7 +4,6 @@ import com.example.iplhistory.model.Match;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.Job;
 
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
@@ -38,7 +37,6 @@ public class BatchConfiguration {
                 .names(FIELDS)
                 .fieldSetMapper(new BeanWrapperFieldSetMapper<>() {
                     {
-                        System.out.println("reader");
                         setTargetType(MatchInput.class);
                     }
                 })
@@ -73,6 +71,7 @@ public class BatchConfiguration {
     }
 
     @Bean
+
     public Step step1(JobRepository jobRepository,
                       PlatformTransactionManager transactionManager, JdbcBatchItemWriter<Match> writer) {
         return new StepBuilder("step1", jobRepository)
