@@ -1,7 +1,8 @@
 import { React } from "react";
 import {Link} from "react-router-dom";
+import './MatchDetailsSmall.css'
 
-export const MatchDetailsSmall = ({match}) =>  {
+export const MatchDetailsSmall = ({match, teamName}) =>  {
     var res = "";
     if(match.result === "chased") {
         res = "wickets";
@@ -11,6 +12,8 @@ export const MatchDetailsSmall = ({match}) =>  {
     }
     const team1Route = `/teams/${match.team1}`;
     const team2Route = `/teams/${match.team2}`;
+
+
     return (
         <div className="MatchDetailsSmall">
             <h3>

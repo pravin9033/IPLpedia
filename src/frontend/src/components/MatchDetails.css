@@ -1,0 +1,21 @@
+.MatchDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+.MatchDetails .match-date{
+    margin-top: 10px;
+}
+.MatchDetails .match-venue{
+    margin-top: 10px;
+}
+.MatchDetails .match-decision{
+    margin-top: 10px;
+}
+.MatchDetails .match-result{
+    margin-top: 10px;
+}
+
+
