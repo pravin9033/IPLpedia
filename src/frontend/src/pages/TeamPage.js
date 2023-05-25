@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import {MatchDetails} from "../components/MatchDetails";
 import {MatchDetailsSmall} from "../components/MatchDetailsSmall";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {PieChart} from "react-minimal-pie-chart";
 import './TemPage.css';
 
@@ -11,12 +11,12 @@ export const TeamPage = () =>  {
     const {teamName} = useParams();
     useEffect(
         () => {
-            const fetchMatches = async () => {
+            const fetchTeam = async () => {
                 const response = await fetch(`http://localhost:8080/team/${teamName}`);
                 const data = await response.json();
                 setTeam(data);
             };
-            fetchMatches();
+            fetchTeam();
         },[teamName]
     );
     if(!team || !team.teamName) {
@@ -43,7 +43,7 @@ export const TeamPage = () =>  {
 
 
             <div className="more">
-                <a href="#">More ></a>
+                <Link to={`/teams/${teamName}/matches/2022`}>More ></Link>
             </div>
         </div>
     );

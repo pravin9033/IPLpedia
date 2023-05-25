@@ -1,0 +1,22 @@
+.HomePage{
+
+}
+
+.HomePage .Header-Section{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.HomePage .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.HomePage .Header-Section .app-name {
+    font-size: 3rem;
+    padding: 20px;
+    margin: 20px auto;
+}
