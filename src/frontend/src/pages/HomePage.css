@@ -1,6 +1,12 @@
 .HomePage{
 
 }
+.HomePage .app-name {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: black;
+    font-weight: 550;
+}
 
 .HomePage .Header-Section{
     justify-self: center;
@@ -10,10 +16,16 @@
 
 .HomePage .team-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+
 }
+.HomePage .team-grid .image{
+    height: 100%;
+    width: 100%;
+}
+
 
 .HomePage .Header-Section .app-name {
     font-size: 3rem;

@@ -7,29 +7,34 @@
 }
 
 .TeamPage .win-loss{
+    color: black;
     justify-self: center;
-    padding: 70px;
+    padding: 50px;
     text-align: center;
-
 }
 
 .TeamPage .team-name{
     grid-column: span 3;
     justify-self: start;
-    align-self: end;
+    align-self: center;
 }
 
 
 .TeamPage .team-name .team-name-header{
+    color: black;
     font-size: 4rem;
 }
 
 .TeamPage .match-details{
+    width: 100%;
     grid-column: span 4;
+}
+.TeamPage .match-details .latest-matches{
+    color: black;
 }
 
 .TeamPage .more{
     align-self: center;
     justify-self: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }

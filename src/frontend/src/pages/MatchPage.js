@@ -16,17 +16,17 @@ export const MatchPage = () =>  {
                 setMatches(data);
             };
             fetchMatches();
+
         },[teamName,year]
     );
+
     return (
         <div className="MatchPage">
             <div className="year-selector">
-                <h3>Select year</h3>
                 <YearSelector teamName={teamName} />
+                <h1 className="page-heading bold">{teamName} matches in {year}</h1>
             </div>
-
-            <div>
-                <h1 className="page-heading">{teamName} matches in {year}</h1>
+            <div className={"card-display"}>
                 {matches.map(match => <MatchDetails teamName={teamName} match={match} />)}
             </div>
         </div>

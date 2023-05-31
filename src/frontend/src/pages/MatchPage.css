@@ -1,15 +1,21 @@
 .MatchPage{
+
+
+}
+.MatchPage .card-display{
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
 }
 .MatchPage .year-selector {
+    color: black;
     justify-self: end;
     padding: 20px;
 }
 
 .MatchPage .page-heading{
-    margin: 20px;
+    color: black;
+    margin-top: 20px;
+    margin-left: 0px;
 }

@@ -25,20 +25,20 @@ export const TeamPage = () =>  {
     return (
         <div className="TeamPage">
             <div className="team-name">
-                <h1 className="team-name-header">{team.teamName}</h1>
+                <h1 className="team-name-header ">{team.teamName}</h1>
             </div>
             <div className="win-loss">
                 Wins /Losses
                 <PieChart data={[
                     {title: 'Loss', value: team.totalMatches-team.totalWins, color: '#a34d5d'},
                     {title: 'Won', value: team.totalWins, color: '#4da375'},
-
                 ]} />
             </div>
             <div className="match-details">
-                <h3>Latest Matches</h3>
+                <h3 className={"latest-matches"}>Latest Matches</h3>
                 <MatchDetails teamName={team.teamName} match = {team.matches[0]}/>
             </div>
+
             {team.matches.slice(1).map(match => <MatchDetailsSmall match = {match}/>)}
 
 
